@@ -1,0 +1,43 @@
+
+plugins {
+	id 'java-library'
+    id 'net.minecrell.plugin-yml.bukkit' version '0.3.0'
+}
+
+dependencies {
+    compileClasspath 'org.github.paperspigot:paperspigot:1.8.8-R0.1-SNAPSHOT'
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+	annotationProcessor 'org.projectlombok:lombok:1.18.12'
+	
+	// Tests
+	testCompileOnly 'org.projectlombok:lombok:1.18.12'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+}
+
+repositories {
+        jcenter()
+        maven {
+            name = 'sonartype'
+            url = 'https://oss.sonatype.org/content/repositories/snapshots/'
+        }
+        maven {
+            name = 'codemc-repo'
+            url = 'https://repo.codemc.io/repository/maven-public/'
+        }
+        maven {
+            name = 'codemc-nms'
+            url = 'https://repo.codemc.io/repository/nms/'
+        }
+    }
+
+
+bukkit {
+    name = 'TRCinematics'
+    version = '1.0'
+    description = 'Basic Cinematics plugin'
+     website = 'https://github.com/tr7zw'
+    author = 'tr7zw'
+    
+    main = 'dev.tr7zw.cinematics.TRCinematics'
+
+}
